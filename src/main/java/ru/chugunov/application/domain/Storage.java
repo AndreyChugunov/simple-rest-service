@@ -6,8 +6,25 @@ package ru.chugunov.application.domain;
  * @author Andrei Chugunov
  */
 public class Storage {
+
+    Storage(){}
+
+    public Storage(String value, int amount) {
+        this.value = value;
+        this.amount = amount;
+    }
+
+    private Long id;
     private String value;
     private int amount;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getValue() {
         return value;
@@ -25,15 +42,12 @@ public class Storage {
         this.amount = amount;
     }
 
-    //TODO
     @Override
-    public boolean equals(Object o) {
-        return false;
-    }
-
-    //TODO
-    @Override
-    public int hashCode() {
-        return 0;
+    public String toString() {
+        return "Storage{" +
+                "id=" + id +
+                ", value='" + value + '\'' +
+                ", amount=" + amount +
+                '}';
     }
 }
